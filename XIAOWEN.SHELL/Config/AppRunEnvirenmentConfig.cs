@@ -4,7 +4,7 @@ using XIAOWEN.DATA.Log;
 
 namespace XIAOWEN.SHELL.Config
 {
-    public class LaunchConfig
+    public class AppRunEnvirenmentConfig
     {
         /// <summary>
         /// 在Debug版本下运行的模式
@@ -43,7 +43,7 @@ namespace XIAOWEN.SHELL.Config
             AppDomain.CurrentDomain.UnhandledException += AppDomainUnhandledException;
             try
             {
-                MyBootstrapper bootstrapper = new MyBootstrapper();
+                MyBootstrapperConfig bootstrapper = new MyBootstrapperConfig();
                 bootstrapper.Run();
             }
             catch (Exception ex)

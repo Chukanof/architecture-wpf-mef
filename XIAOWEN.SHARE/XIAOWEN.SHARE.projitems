@@ -57,6 +57,7 @@
     <None Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.PersistenceFramework.dll" />
     <None Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Scheduling.Core.dll" />
     <None Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Zip.dll" />
+    <None Include="$(MSBuildThisFileDirectory)Wiki\README.docx" />
     <None Include="$(MSBuildThisFileDirectory)WindowLibs\SING.Modules.Desktop.dll" />
   </ItemGroup>
   <ItemGroup>

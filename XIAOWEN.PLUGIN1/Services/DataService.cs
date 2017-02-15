@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace XIAOWEN.PLUGIN1.ViewModels
+namespace XIAOWEN.PLUGIN1.Services
 {
-    class MainControlViewModel
+    public class DataService : IDataService
     {
     }
 }

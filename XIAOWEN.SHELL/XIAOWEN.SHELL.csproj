@@ -89,8 +89,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Config\LaunchConfig.cs" />
-    <Compile Include="Config\MyBootstrapper.cs" />
+    <Compile Include="Config\AppRunEnvirenmentConfig.cs" />
+    <Compile Include="Config\MyBootstrapperConfig.cs" />
     <Compile Include="LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -129,6 +129,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="DigitalClock\" />
+    <Folder Include="Resources\" />
+    <Folder Include="Services\" />
     <Folder Include="Themes\" />
     <Folder Include="UserControls\" />
     <Folder Include="ViewModels\" />

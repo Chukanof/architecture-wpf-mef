@@ -83,6 +83,14 @@
     <AppDesigner Include="Properties\" />
     <None Include="README.ownmd" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Bases\" />
+    <Folder Include="BaseTools\" />
+    <Folder Include="Controls\" />
+    <Folder Include="Data\" />
+    <Folder Include="Helper\" />
+    <Folder Include="ScheduleProcess\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>xcopy /Y /I "$(TargetPath)" "$(SolutionDir)XIAOWEN.SHELL\bin\Debug\Plugins"</PostBuildEvent>

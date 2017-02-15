@@ -13,7 +13,7 @@ using XIAOWEN.INFRASTRUCTURE.Behaviors;
 
 namespace XIAOWEN.SHELL.Config
 {
-    public class MyBootstrapper : MefBootstrapper
+    public class MyBootstrapperConfig : MefBootstrapper
     {
         public System.Windows.Threading.Dispatcher OwnerDispater { get; set; }
 
@@ -128,7 +128,7 @@ namespace XIAOWEN.SHELL.Config
             {
                 base.ConfigureAggregateCatalog();
 
-                this.AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(MyBootstrapper).Assembly));
+                this.AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(MyBootstrapperConfig).Assembly));
                 this.AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(DesktopModule).Assembly));
                 this.AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(AutoPopulateExportedViewsBehavior).Assembly));
 
