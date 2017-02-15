@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>661decbc-9d36-4c9d-960c-f16a9c3cbfc0</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>XIAOWEN.SHARE</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)Libs\Telerik.Pivot.Core.dll" />
+    <None Include="$(MSBuildThisFileDirectory)Libs\Telerik.Pivot.DataProviders.Adomd.dll" />
+    <None Include="$(MSBuildThisFileDirectory)Libs\Telerik.Pivot.DataProviders.Xmla.dll" />
+    <None Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Controls.Chart.dll" />
+    <None Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Controls.Charting.dll" />
+    <None Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Controls.Data.dll" />
+    <None Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Controls.DataServices.dll" />
+    <None Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Controls.DataServices50.dll" />
+    <None Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Controls.DataVisualization.dll" />
+    <None Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Controls.Diagrams.dll" />
+    <None Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Controls.Diagrams.Extensions.dll" />
+    <None Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Controls.dll" />
+    <None Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Controls.Docking.dll" />
+    <None Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Controls.EntityFramework.dll" />
+    <None Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Controls.Expressions.dll" />
+    <None Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Controls.FixedDocumentViewers.dll" />
+    <None Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Controls.GanttView.dll" />
+    <None Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Controls.Gauge.dll" />
+    <None Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Controls.GridView.dll" />
+    <None Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Controls.ImageEditor.dll" />
+    <None Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Controls.Input.dll" />
+    <None Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Controls.Navigation.dll" />
+    <None Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Controls.Pivot.dll" />
+    <None Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Controls.PivotFieldList.dll" />
+    <None Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Controls.RibbonView.dll" />
+    <None Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Controls.RichTextBoxUI.dll" />
+    <None Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Controls.ScheduleView.dll" />
+    <None Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Controls.Spreadsheet.dll" />
+    <None Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Data.dll" />
+    <None Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Diagrams.Core.dll" />
+    <None Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Documents.Core.dll" />
+    <None Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Documents.dll" />
+    <None Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Documents.Fixed.dll" />
+    <None Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Documents.FormatProviders.Html.dll" />
+    <None Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Documents.FormatProviders.MsRichTextBoxXaml.dll" />
+    <None Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Documents.FormatProviders.OpenXml.dll" />
+    <None Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Documents.FormatProviders.Rtf.dll" />
+    <None Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Documents.FormatProviders.Xaml.dll" />
+    <None Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Documents.Proofing.DataGrid.dll" />
+    <None Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Documents.Proofing.Dictionaries.En-US.dll" />
+    <None Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Documents.Proofing.dll" />
+    <None Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Documents.Proofing.RadGridView.dll" />
+    <None Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Documents.Spreadsheet.dll" />
+    <None Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll" />
+    <None Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Maths.dll" />
+    <None Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.PersistenceFramework.dll" />
+    <None Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Scheduling.Core.dll" />
+    <None Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Zip.dll" />
+    <None Include="$(MSBuildThisFileDirectory)WindowLibs\SING.Modules.Desktop.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Libs\Telerik.Pivot.Core.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)Libs\Telerik.Pivot.DataProviders.Adomd.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)Libs\Telerik.Pivot.DataProviders.Xmla.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Controls.Chart.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Controls.Charting.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Controls.Data.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Controls.DataServices.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Controls.DataServices50.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Controls.DataVisualization.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Controls.Diagrams.Extensions.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Controls.Diagrams.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Controls.Docking.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Controls.EntityFramework.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Controls.Expressions.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Controls.FixedDocumentViewers.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Controls.GanttView.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Controls.Gauge.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Controls.GridView.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Controls.ImageEditor.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Controls.Input.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Controls.Navigation.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Controls.Pivot.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Controls.PivotFieldList.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Controls.RibbonView.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Controls.RichTextBoxUI.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Controls.ScheduleView.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Controls.Spreadsheet.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Controls.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Data.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Diagrams.Core.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Documents.Core.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Documents.Fixed.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Documents.FormatProviders.Html.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Documents.FormatProviders.MsRichTextBoxXaml.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Documents.FormatProviders.OpenXml.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Documents.FormatProviders.Rtf.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Documents.FormatProviders.Xaml.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Documents.Proofing.DataGrid.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Documents.Proofing.Dictionaries.En-US.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Documents.Proofing.RadGridView.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Documents.Proofing.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Documents.Spreadsheet.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Documents.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Maths.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.PersistenceFramework.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Scheduling.Core.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)Libs\Telerik.Windows.Zip.xml" />
+  </ItemGroup>
+</Project>
