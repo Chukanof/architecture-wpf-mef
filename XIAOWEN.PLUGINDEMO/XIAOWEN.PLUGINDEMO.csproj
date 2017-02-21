@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>XIAOWEN.PLUGINDEMO</RootNamespace>
-    <AssemblyName>XIAOWEN.PLUGINDEMO</AssemblyName>
+    <AssemblyName>PLUGINDEMO</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -65,6 +65,10 @@
     </Page>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>if not exist "$(SolutionDir)XIAOWEN.SHELL\bin\Debug\Plugins" mkdir "$(SolutionDir)XIAOWEN.SHELL\bin\Debug\Plugins" 
+copy "$(TargetPath)" "$(SolutionDir)XIAOWEN.SHELL\bin\Debug\Plugins"</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

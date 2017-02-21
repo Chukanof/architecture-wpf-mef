@@ -6,7 +6,7 @@ namespace XIAOWEN.INFRASTRUCTURE.Behaviors
 {
     [Export(typeof(AutoPopulateExportedViewsBehavior))]
     [PartCreationPolicy(CreationPolicy.NonShared)]
-    public class AutoPopulateExportedViewsBehavior: RegionBehavior, IPartImportsSatisfiedNotification
+    public class AutoPopulateExportedViewsBehavior : RegionBehavior, IPartImportsSatisfiedNotification
     {
         public static string key = "AutoPopulateExportedViewsBehavior";
         protected override void OnAttach()

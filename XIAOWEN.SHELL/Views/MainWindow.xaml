@@ -6,7 +6,10 @@
         xmlns:local="clr-namespace:XIAOWEN.SHELL.Views"
         mc:Ignorable="d"
         Title="MainWindow" Height="300" Width="300">
-    <Grid>
-        
+    <Grid Background="Purple">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
     </Grid>
 </Window>

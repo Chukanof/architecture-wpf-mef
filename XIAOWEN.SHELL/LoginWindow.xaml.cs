@@ -12,6 +12,21 @@ namespace XIAOWEN.SHELL
         public LoginWindow()
         {
             InitializeComponent();
+            MessageBox.Show("Login");
+
+
+            SplashWindow tempOpen = new SplashWindow();
+            tempOpen.ShowLoadProcess += tempOpen_ShowLoadProcess;
+
+            tempOpen.SystemStartLoaded();
+        }
+
+        private void tempOpen_ShowLoadProcess(string obj)
+        {
+            //this.progressReport.Value = this.progressReport.Value + 10;
+            //Logger.Info(txt + "---->" + progressReport.Value);
+            //if (this.progressReport.Value >= 100)
+            //    this.Close();
         }
 
         public bool Result { get; set; }
@@ -30,9 +45,9 @@ namespace XIAOWEN.SHELL
             {
                 Application.Current.ShutdownMode = ShutdownMode.OnMainWindowClose;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                Logger.Info("应用程序启动期间出现异常：");
+                Logger.Info("应用程序启动期间出现异常：{0}", ex.Message);
             }
 
             return loginWin.Result;

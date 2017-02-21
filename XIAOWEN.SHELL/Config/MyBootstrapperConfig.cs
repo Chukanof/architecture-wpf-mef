@@ -13,14 +13,14 @@ using XIAOWEN.INFRASTRUCTURE.Behaviors;
 
 namespace XIAOWEN.SHELL.Config
 {
+    /// <summary>
+    /// 程序启动
+    /// 记载Desktop及相关模块的组件，即Plugins
+    /// </summary>
     public class MyBootstrapperConfig : MefBootstrapper
     {
         public System.Windows.Threading.Dispatcher OwnerDispater { get; set; }
-
-        public delegate void ShowDelegate(string txt);
-        public ShowDelegate ShowDelegateEvent;
-        private System.Windows.SplashScreen splash;
-
+        public Action<string> ShowDelegateEvent;
 
 
         /// <summary>
@@ -129,12 +129,15 @@ namespace XIAOWEN.SHELL.Config
                 base.ConfigureAggregateCatalog();
 
                 this.AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(MyBootstrapperConfig).Assembly));
+                //Desktop
                 this.AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(DesktopModule).Assembly));
                 this.AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(AutoPopulateExportedViewsBehavior).Assembly));
 
-                DirectoryCatalog catalog = new DirectoryCatalog("Modules");
+                //DirectoryCatalog catalog = new DirectoryCatalog("Modules");
+
+                DirectoryCatalog catalog = new DirectoryCatalog("Plugins");
                 this.AggregateCatalog.Catalogs.Add(catalog);
-                OwnerDispater.Invoke(DispatcherPriority.Render, ShowDelegateEvent, "初始化Modules......");
+                OwnerDispater.Invoke(DispatcherPriority.Render, ShowDelegateEvent, "初始化Plugins......");
 
                 //catalog = new DirectoryCatalog("AddIn");
                 //this.AggregateCatalog.Catalogs.Add(catalog);
@@ -177,5 +180,16 @@ namespace XIAOWEN.SHELL.Config
             return this.Container.GetExportedValue<MainWindow>();
         }
 
+
+
+        public override void RegisterDefaultTypesIfMissing()
+        {
+
+        }
+
+        protected virtual RegionAdapterMappings ConfigureRegionAdapterMappings()
+        {
+            return null;
+        }
     }
 }

@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>XIAOWEN.PLUGIN2</RootNamespace>
-    <AssemblyName>XIAOWEN.PLUGIN2</AssemblyName>
+    <AssemblyName>PLUGIN2</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -61,7 +61,8 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy /Y /I "$(TargetPath)" "$(SolutionDir)XIAOWEN.SHELL\bin\Debug\Plugins"</PostBuildEvent>
+    <PostBuildEvent>if not exist "$(SolutionDir)XIAOWEN.SHELL\bin\Debug\Plugins" mkdir "$(SolutionDir)XIAOWEN.SHELL\bin\Debug\Plugins" 
+copy "$(TargetPath)" "$(SolutionDir)XIAOWEN.SHELL\bin\Debug\Plugins"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
