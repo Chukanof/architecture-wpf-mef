@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace XIAOWEN.PLUGIN2.ViewModels
 {
-    public class MainControlViewModel
+    public class MainControlViewModel:BindableBase
     {
     }
 }

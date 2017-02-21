@@ -6,6 +6,16 @@
         xmlns:local="clr-namespace:XIAOWEN.SHELL"
         mc:Ignorable="d"
         Title="SplashWindow" Height="300" Width="300">
+
+    <Window.Resources>
+        <Storyboard x:Key="showStoryBoard">
+            <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="txtLoading">
+                <EasingThicknessKeyFrame KeyTime="0:0:0" Value="0,0,0,0"/>
+                <EasingThicknessKeyFrame KeyTime="0:0:1" Value="0,0,0,70"/>
+            </ThicknessAnimationUsingKeyFrames>
+        </Storyboard>
+    </Window.Resources>
+    
     <Grid>
         <TextBlock x:Name="txtLoading" TextAlignment="Left" FontSize="16" FontWeight="Normal"  Foreground="#FF05FFFF"  Text="载入进度 ......"  TextWrapping="Wrap" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="421" Margin="8,0,0,8" >
             <TextBlock.Effect>

@@ -88,6 +88,7 @@
     <Compile Include="SplashWindow.xaml.cs">
       <DependentUpon>SplashWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\MainWindowViewModel.cs" />
     <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
@@ -148,7 +149,6 @@
     <Folder Include="Services\" />
     <Folder Include="Themes\" />
     <Folder Include="UserControls\" />
-    <Folder Include="ViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\XIAOWEN.DATA\XIAOWEN.DATA.csproj">

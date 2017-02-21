@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading;
 using System.Windows;
+using System.Windows.Media.Animation;
 using System.Windows.Threading;
 using XIAOWEN.DATA.Log;
 using XIAOWEN.SHELL.Config;
@@ -12,6 +13,7 @@ namespace XIAOWEN.SHELL
     /// </summary>
     public partial class SplashWindow : Window
     {
+        Storyboard Showboard;
         public Action hideDelegate;
         Action<string> showDelegate;
         public event Action<string> ShowLoadProcess;
@@ -21,6 +23,7 @@ namespace XIAOWEN.SHELL
             InitializeComponent();
             hideDelegate = new Action(hideText);
             showDelegate = new Action<string>(showText);
+            Showboard = this.Resources["showStoryBoard"] as Storyboard;
         }
 
         private void hideText()
@@ -30,11 +33,11 @@ namespace XIAOWEN.SHELL
 
         private void showText(string text)
         {
-            //if (ShowLoadProcess != null)
-            //    ShowLoadProcess.Invoke(text);
+            if (ShowLoadProcess != null)
+                ShowLoadProcess.Invoke(text);
 
             txtLoading.Text = text;
-            //BeginStoryboard(Showboard);
+            BeginStoryboard(Showboard);
         }
 
         public void SystemStartLoaded()

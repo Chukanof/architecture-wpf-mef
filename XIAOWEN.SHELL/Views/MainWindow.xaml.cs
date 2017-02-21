@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Composition;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,17 +12,34 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using XIAOWEN.SHELL.ViewModels;
 
 namespace XIAOWEN.SHELL.Views
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>    
-    public partial class MainWindow : Window
+    [Export]
+    public partial class MainWindow : Window, IPartImportsSatisfiedNotification
     {
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        [Import(AllowRecomposition = false)]
+        public MainWindowViewModel MainWindowViewModel
+        {
+            get { return this.DataContext as MainWindowViewModel; }
+            set { this.DataContext = value; }
+        }
+
+        /// <summary>
+        /// Implement for IPartImportsSatisfiedNotification interface
+        /// </summary>
+        public void OnImportsSatisfied()
+        {
+
         }
     }
 }

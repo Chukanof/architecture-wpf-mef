@@ -100,7 +100,6 @@ namespace XIAOWEN.SHELL.Config
                                          OwnerDispater.Invoke(DispatcherPriority.Render, ShowDelegateEvent, "初始化完成......");
                                          if (this.Shell != null)
                                          {
-
                                              //((Window) Shell).Opacity = 0.3;
 
                                              RegionManager.SetRegionManager(this.Shell, this.Container.GetExportedValue<IRegionManager>());
@@ -113,17 +112,12 @@ namespace XIAOWEN.SHELL.Config
                                              OwnerDispater.Invoke(DispatcherPriority.Render, ShowDelegateEvent, "初始化完成......");
                                          }
                                      });
-
-
-
-
+            
             OwnerDispater.Invoke(DispatcherPriority.Render, ShowDelegateEvent, "初始化完成......");
         }
-
-
+        
         protected override void ConfigureAggregateCatalog()
         {
-
             try
             {
                 base.ConfigureAggregateCatalog();
@@ -142,11 +136,9 @@ namespace XIAOWEN.SHELL.Config
                 //catalog = new DirectoryCatalog("AddIn");
                 //this.AggregateCatalog.Catalogs.Add(catalog);
                 //OwnerDispater.Invoke(DispatcherPriority.Render, ShowDelegateEvent, "初始化AddIn......");
-
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message);
             }
         }
@@ -155,22 +147,17 @@ namespace XIAOWEN.SHELL.Config
         {
             base.ConfigureContainer();
         }
-
-
+        
         protected override void InitializeShell()
         {
             base.InitializeShell();
-
             Application.Current.MainWindow = (MainWindow)this.Shell;
-
             Application.Current.MainWindow.Visibility = Visibility.Hidden;
-
         }
 
         protected override IRegionBehaviorFactory ConfigureDefaultRegionBehaviors()
         {
             var factory = base.ConfigureDefaultRegionBehaviors();
-
             factory.AddIfMissing("AutoPopulateExportedViewsBehavior", typeof(AutoPopulateExportedViewsBehavior));
             return factory;
         }
@@ -179,8 +166,6 @@ namespace XIAOWEN.SHELL.Config
         {
             return this.Container.GetExportedValue<MainWindow>();
         }
-
-
 
         public override void RegisterDefaultTypesIfMissing()
         {
