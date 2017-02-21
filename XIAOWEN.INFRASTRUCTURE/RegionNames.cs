@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace XIAOWEN.PLUGIN2.ViewModels
+namespace XIAOWEN.INFRASTRUCTURE
 {
-    public class MainControlViewModel
+    public class RegionNames
     {
+        public const string MainRegion = "MainRegion";
     }
 }

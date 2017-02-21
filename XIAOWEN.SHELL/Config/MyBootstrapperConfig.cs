@@ -22,14 +22,12 @@ namespace XIAOWEN.SHELL.Config
         public System.Windows.Threading.Dispatcher OwnerDispater { get; set; }
         public Action<string> ShowDelegateEvent;
 
-
         /// <summary>
         /// 记录应用程序运行日志
         /// </summary>
         /// <param name="runWithDefaultConfiguration"></param>
         public override void Run(bool runWithDefaultConfiguration)
         {
-
             this.Logger = this.CreateLogger();
 
             if (this.Logger == null)
@@ -39,14 +37,11 @@ namespace XIAOWEN.SHELL.Config
             }
             OwnerDispater.Invoke(DispatcherPriority.Render, ShowDelegateEvent, "初始化日志......");
 
-
-
             this.ModuleCatalog = this.CreateModuleCatalog();
             if (this.ModuleCatalog == null)
             {
                 OwnerDispater.Invoke(DispatcherPriority.Render, ShowDelegateEvent, "初始化日志出错！");
             }
-
 
             this.ConfigureModuleCatalog();
             OwnerDispater.Invoke(DispatcherPriority.Render, ShowDelegateEvent, "注册相关目录......");
@@ -70,14 +65,12 @@ namespace XIAOWEN.SHELL.Config
 
             this.ConfigureContainer();
 
-
             this.ConfigureServiceLocator();
             OwnerDispater.Invoke(DispatcherPriority.Render, ShowDelegateEvent, "初始化服务......");
 
             this.ConfigureRegionAdapterMappings();
 
             this.ConfigureDefaultRegionBehaviors();
-
 
             this.RegisterFrameworkExceptionTypes();
             OwnerDispater.Invoke(DispatcherPriority.Render, ShowDelegateEvent, "初始化相关模块，......");
@@ -86,7 +79,6 @@ namespace XIAOWEN.SHELL.Config
 
             if ((exports != null) && (exports.Count() > 0))//注意这里的Count()方法需要依赖System.linq包
             {
-
                 this.InitializeModules();
             }
 
@@ -101,7 +93,6 @@ namespace XIAOWEN.SHELL.Config
                                          if (this.Shell != null)
                                          {
                                              //((Window) Shell).Opacity = 0.3;
-
                                              RegionManager.SetRegionManager(this.Shell, this.Container.GetExportedValue<IRegionManager>());
                                              OwnerDispater.Invoke(DispatcherPriority.Render, ShowDelegateEvent, "初始化完成......");
 
@@ -112,10 +103,10 @@ namespace XIAOWEN.SHELL.Config
                                              OwnerDispater.Invoke(DispatcherPriority.Render, ShowDelegateEvent, "初始化完成......");
                                          }
                                      });
-            
+
             OwnerDispater.Invoke(DispatcherPriority.Render, ShowDelegateEvent, "初始化完成......");
         }
-        
+
         protected override void ConfigureAggregateCatalog()
         {
             try
@@ -127,10 +118,9 @@ namespace XIAOWEN.SHELL.Config
                 this.AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(DesktopModule).Assembly));
                 this.AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(AutoPopulateExportedViewsBehavior).Assembly));
 
+                this.AggregateCatalog.Catalogs.Add(new DirectoryCatalog("Plugins"));
                 //DirectoryCatalog catalog = new DirectoryCatalog("Modules");
 
-                DirectoryCatalog catalog = new DirectoryCatalog("Plugins");
-                this.AggregateCatalog.Catalogs.Add(catalog);
                 OwnerDispater.Invoke(DispatcherPriority.Render, ShowDelegateEvent, "初始化Plugins......");
 
                 //catalog = new DirectoryCatalog("AddIn");
@@ -147,7 +137,7 @@ namespace XIAOWEN.SHELL.Config
         {
             base.ConfigureContainer();
         }
-        
+
         protected override void InitializeShell()
         {
             base.InitializeShell();
@@ -157,7 +147,10 @@ namespace XIAOWEN.SHELL.Config
 
         protected override IRegionBehaviorFactory ConfigureDefaultRegionBehaviors()
         {
+            //这里有问题
+            //
             var factory = base.ConfigureDefaultRegionBehaviors();
+
             factory.AddIfMissing("AutoPopulateExportedViewsBehavior", typeof(AutoPopulateExportedViewsBehavior));
             return factory;
         }

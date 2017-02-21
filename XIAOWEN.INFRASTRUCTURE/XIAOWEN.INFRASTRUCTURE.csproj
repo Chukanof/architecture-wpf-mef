@@ -59,6 +59,8 @@
   <ItemGroup>
     <Compile Include="Behaviors\AutoPopulateExportedViewsBehavior.cs" />
     <Compile Include="Behaviors\IViewRegionRegistration.cs" />
+    <Compile Include="RegionNames.cs" />
+    <Compile Include="Behaviors\ViewExportAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
