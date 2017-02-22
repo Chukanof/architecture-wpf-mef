@@ -38,6 +38,10 @@
       <HintPath>..\packages\Prism.Core.6.2.0\lib\net45\Prism.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Prism.Mef.Wpf, Version=6.2.0.0, Culture=neutral, PublicKeyToken=91a96d2a154366d8, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.Mef.6.2.0\lib\net45\Prism.Mef.Wpf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Prism.Wpf, Version=6.2.0.0, Culture=neutral, PublicKeyToken=91a96d2a154366d8, processorArchitecture=MSIL">
       <HintPath>..\packages\Prism.Wpf.6.2.0\lib\net45\Prism.Wpf.dll</HintPath>
       <Private>True</Private>
